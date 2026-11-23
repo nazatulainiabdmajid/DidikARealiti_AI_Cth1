@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Haiwan di Sekelilingku: Bertelur atau Beranak?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="color-scheme" content="only light">
+<script src="https://nazatulainiabdmajid.github.io/DidikARealiti_AI/ar-kad.js"></script>
+<script src="https://nazatulainiabdmajid.github.io/DidikARealiti_AI/ai-adaptif.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+:root{
+  color-scheme: only light;
+  --paper:#F4F6F1; --card:#FFFFFF; --ink:#1B2430; --muted:#5B6675; --line:#D9DED3; --soft:#ECEFE7;
+  --ce:#D9480F; --ce-soft:#FFE8DC; --ro:#6741D9; --ro-soft:#ECE5FF; --ac:#1864AB; --ac-soft:#E1EEFB; --ae:#2B8A3E; --ae-soft:#E3F4E6;
+  --ar:#0B7285; --ai:#C2255C; --ps:#B35C00;
+  --ok:#2B8A3E; --bad:#C92A2A;
+  --f-d:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --f-b:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--paper);color:var(--ink)}
+body{margin:0;font-family:var(--f-b);font-size:16.5px;line-height:1.55;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-d);margin:0;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(26px,4.8vw,40px);font-weight:800} h2{font-size:clamp(22px,3.4vw,28px);font-weight:800} h3{font-size:18px;font-weight:600}
+p{margin:0} .muted{color:var(--muted)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px))}
+.top .wrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.brand{font-family:var(--f-d);font-weight:800;margin-right:auto}
+.ph{display:flex;gap:6px;flex-wrap:wrap}
+.phb{border:2px solid var(--line);background:var(--card);border-radius:999px;padding:4px 12px 4px 5px;display:flex;gap:6px;align-items:center;font-size:14px;font-weight:700;color:var(--ink)}
+.phb .n{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:12.5px}
+.phb[data-p="0"] .n{background:var(--ce)}.phb[data-p="1"] .n{background:var(--ro)}.phb[data-p="2"] .n{background:var(--ac)}.phb[data-p="3"] .n{background:var(--ae)}
+.phb[aria-current="true"]{border-color:var(--ink)}
+.phb.done::after{content:"✓";color:var(--ok);font-weight:800}
+@media (max-width:520px){.brand{display:none}.phb{padding:3px 9px 3px 4px;font-size:13px}.phb .n{width:19px;height:19px}}
+.stars{font-weight:800;color:var(--ps);font-variant-numeric:tabular-nums}
+
+main{padding-block:22px 40px;display:flex;flex-direction:column;gap:18px}
+.hero{display:flex;flex-direction:column;gap:8px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px;border-top:6px solid var(--c,var(--ink))}
+.panel[data-p="0"]{--c:var(--ce);--cs:var(--ce-soft)}.panel[data-p="1"]{--c:var(--ro);--cs:var(--ro-soft)}.panel[data-p="2"]{--c:var(--ac);--cs:var(--ac-soft)}.panel[data-p="3"]{--c:var(--ae);--cs:var(--ae-soft)}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.guide{display:flex;gap:12px;align-items:flex-start;background:var(--cs,var(--soft));border-radius:14px;padding:12px 14px}
+.guide .av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--c,var(--ink));color:#fff;display:grid;place-items:center;font-family:var(--f-d);font-weight:800;font-size:16px}
+.guide p{font-size:16px}
+.guide b.who{display:block;font-size:13px;color:var(--muted);font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:0;border-radius:12px;padding:10px 18px;font-weight:700;background:var(--c,var(--ink));color:#fff}
+.btn.ghost{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.btn.sm{padding:6px 12px;font-size:14.5px}
+.btn.big{font-size:18px;padding:14px 22px;border-radius:16px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+.missions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.fb{border-radius:10px;padding:9px 12px;font-size:15.5px}
+.fb.ok{background:#E3F4E6;color:var(--ok)}.fb.bad{background:#FFE3E3;color:var(--bad)}.fb.info{background:var(--soft)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0;background:#fff}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{border:2px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;color:var(--ink);font-weight:700}
+.opt.right{border-color:var(--ok);background:#E3F4E6}.opt.wrong{border-color:var(--bad);background:#FFE3E3}
+textarea{font:inherit;width:100%;border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;color:var(--ink);min-height:74px;resize:vertical}
+.evidence{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.evidence div{border-radius:12px;background:var(--soft);padding:10px;text-align:center}
+.evidence b{display:block;font-family:var(--f-d);font-size:26px}
+.mic{border:2px solid var(--ai);color:var(--ai);background:#fff;border-radius:999px;padding:6px 14px;font-weight:700}
+.mic.on{background:var(--ai);color:#fff}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;font-weight:700;opacity:0;transition:all .3s;z-index:50;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Sokongan Dialog & Misi */
+.sd{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:4px;color:#fff;vertical-align:2px}
+.sd-pencetus{background:#D9480F}.sd-peringatan{background:#6741D9}.sd-cadangan{background:#1864AB}.sd-pujian{background:#2B8A3E}.sd-ganjaran{background:#B35C00}
+#badges{cursor:pointer}
+.mode2{display:flex;gap:10px;flex-wrap:wrap}.mode2 .btn{flex:1 1 240px;justify-content:center}
+.mpanel{display:flex!important;flex-direction:column;gap:8px}
+.mcur{border:2.5px solid var(--ce);background:var(--ce-soft);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.mcur.isdone,.mcur.all{border-color:var(--ok);background:#E3F4E6}
+.mlab{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mcur .mt{font-size:18px}.mcur p{margin:0;font-size:15.5px}
+.mdots{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.mdots button{font:inherit;font-weight:800;font-size:14px;min-width:44px;min-height:36px;border-radius:999px;border:2px solid var(--line);background:#fff;cursor:pointer}
+.mdots button.done{border-color:var(--ok);background:#E3F4E6}
+.mdots button.on{outline:3px solid var(--ce);outline-offset:1px}
+.mdots span{font-size:14px;color:var(--muted);margin-left:4px}
+.huntbox{background:#FFF3BF;border:2px solid #F0C419;border-radius:12px;padding:8px 12px;font-weight:700;font-size:16.5px!important}
+#tapMission{background:#FFF9DB;border-radius:10px;padding:8px 12px}
+
+.found{display:flex;gap:8px;flex-wrap:wrap}
+.found>span{border:1.5px solid var(--line);border-radius:10px;padding:4px 12px;background:#fff;font-weight:700;text-transform:capitalize}
+.found>span.got{border-color:var(--ok);background:#E3F4E6}
+
+/* Pengelasan Fasa 3 & Ramalan Fasa 4 */
+.sort-bins{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:600px){.sort-bins{grid-template-columns:1fr}}
+.bin{border:2px dashed var(--line);border-radius:14px;padding:12px;background:var(--soft);min-height:110px}
+.bin h4{margin:0 0 8px;font-family:var(--f-d);font-size:17px}
+.bin.bertelur{border-color:#D9480F;background:#FFF4EE}
+.bin.beranak{border-color:#1864AB;background:#EDF5FC}
+.bin-items{display:flex;flex-wrap:wrap;gap:6px}
+.bin-tag{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:4px 10px;font-weight:700;font-size:14.5px;text-transform:capitalize}
+.animal-pool{display:flex;flex-wrap:wrap;gap:8px}
+.apill{border:2px solid var(--ac);background:#fff;border-radius:12px;padding:8px 14px;font-weight:700;text-transform:capitalize;display:flex;align-items:center;gap:8px}
+.apill.active{background:var(--ac);color:#fff}
+.apill.done{border-color:var(--ok);background:#E3F4E6;color:var(--ink);opacity:.8}
+
+.sit-card{border:2px solid var(--ae);background:var(--ae-soft);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.qaras{display:inline-block;border-radius:999px;padding:2px 10px;font-weight:800;font-size:13px;background:#fff;color:var(--ae);border:1px solid var(--ae)}
+.mine{display:flex;gap:8px;flex-wrap:wrap}
+.mine span{border:1.5px solid var(--ok);background:#E3F4E6;border-radius:10px;padding:4px 12px;font-weight:700}
+
+@media print{body *{visibility:hidden}#printArea,#printArea *{visibility:visible}#printArea{position:absolute;left:0;top:0;width:100%}}
+
+.credit{max-width:1100px;margin:28px auto 0;padding:18px 16px 26px;border-top:1.5px solid var(--line,#D9DED3);text-align:center;font-size:13.5px;line-height:1.55;color:var(--muted,#5C6670)}
+.credit p{margin:2px 0}.credit b{color:var(--ink,#1B2430)}
+.credit a{color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.credit .logos{display:flex;gap:18px;justify-content:center;align-items:center;margin-bottom:8px}
+.credit .logos img{height:46px;width:auto;object-fit:contain}
+.credit .lic{font-size:12.5px}
+.bAR{color:#D9480F}.bAI{color:#1864AB}
+.home{display:inline-flex;align-items:center;gap:4px;font-weight:800;font-size:14.5px;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;white-space:nowrap;cursor:pointer;font-family:inherit}
+.home.warn{border-color:#C92A2A;color:#C92A2A;background:#FFF5F5}
+.home:hover,.home:focus-visible{border-color:var(--ink)}
+.pnav{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;border-top:1.5px dashed var(--line);margin-top:6px;padding-top:14px}
+.pnav .btn{flex:0 1 auto}
+.pnav .sp{flex:1}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <a class="home" href="contoh.html" title="Kembali ke menu contoh">🏠 Menu</a>
+  <button class="home" id="resetAll" type="button" data-key="haiwan-ar-v1" title="Padam kemajuan dan mula semula">🔄 Mula semula</button>
+  <span class="brand">Haiwan di Sekelilingku</span>
+  <nav class="ph" aria-label="Fasa Kolb">
+    <button class="phb" data-p="0" aria-current="true"><span class="n">1</span>Alami</button>
+    <button class="phb" data-p="1"><span class="n">2</span>Renung</button>
+    <button class="phb" data-p="2"><span class="n">3</span>Faham</button>
+    <button class="phb" data-p="3"><span class="n">4</span>Cuba</button>
+  </nav>
+  <span class="stars" id="stars">★ 0</span>
+  <span class="stars" id="badges" title="Lencana">🏅 0</span>
+</div></div>
+
+<main class="wrap" id="app">
+  <header class="hero">
+    <span class="muted" style="font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px">Sains · Tahun 4 · Haiwan Bertelur dan Haiwan Beranak</span>
+    <h1>Haiwan di Sekelilingku: Bertelur atau Beranak?</h1>
+    <p class="muted">Semua haiwan membiak untuk menghasilkan anak supaya spesiesnya tidak pupus. Teroka kad haiwan melalui empat fasa: Alami, Renung, Faham dan Cuba.</p>
+  </header>
+
+  <!-- ================= FASA 1: ALAMI ================= -->
+  <section class="panel" data-p="0" id="p0">
+    <span class="eyebrow">Fasa 1 · Alami (pengalaman konkrit)</span>
+    <div class="guide"><span class="av">DH</span><p><b class="who">Dr. Hana (Saintis Muda Rimba & Lautan)</b><span id="g0">Selamat datang penyelidik muda! Teroka 6 kad haiwan di sekeliling kita untuk melihat cara haiwan membiak. Ikut 3 misi di bawah, satu demi satu.</span></p></div>
+    
+    <div class="mode2">
+      <button class="btn big" id="tapBtn">✋ Tanpa kamera: klik gambar kad</button>
+      <button class="btn big" style="--c:var(--ar)" id="startBtn">📷 Dengan kamera: imbas kad (AR)</button>
+    </div>
+    <span class="muted" id="status" style="font-size:14.5px"></span>
+    
+    <div class="missions" id="missions"></div>
+    
+    <div class="card" id="tapWrap" hidden>
+      <h3>Mod tanpa kamera</h3>
+      <p id="tapMission" style="font-weight:700"></p>
+      <div id="tapGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px"></div>
+      <div id="tapShow" style="margin-top:12px"></div>
+    </div>
+
+    <div class="fb bad" id="err" hidden></div>
+    
+    <div class="card">
+      <h3>Koleksi kad haiwan kamu</h3>
+      <div class="found" id="found"></div>
+      <p class="muted" id="summary" style="font-size:14.5px"></p>
+    </div>
+
+    <details class="card" id="printArea">
+      <summary style="font-weight:700;cursor:pointer">Kad untuk dicetak (guru)</summary>
+      <p class="muted" style="font-size:14.5px">Cetak berwarna, sekurang-kurangnya 6 cm. Kad juga boleh dibuka di skrin komputer dan diimbas dengan kamera telefon.</p>
+      <div id="cards"></div>
+      <div class="row"><button class="btn ghost sm" onclick="window.print()">Cetak kad</button></div>
+    </details>
+  </section>
+
+  <!-- ================= FASA 2: RENUNG ================= -->
+  <section class="panel" data-p="1" id="p1" hidden>
+    <span class="eyebrow">Fasa 2 · Renung (pemerhatian reflektif)</span>
+    <div class="guide"><span class="av">DH</span><p><b class="who">Dr. Hana (Saintis Muda Rimba & Lautan)</b>Mari renung semula penemuan kamu daripada kad tadi. Jawab 3 soalan ini untuk mengesan corak pembiakan haiwan!</p></div>
+
+    <div class="card">
+      <h3>Soalan 1 · Apa yang berubah pada tanggapan kita apabila kita membandingkan ikan paus dan penyu yang kedua-duanya tinggal di laut?</h3>
+      <p class="muted" style="font-size:14.5px">Bandingkan cara membiak ikan paus dan penyu berdasarkan maklumat pada kad.</p>
+      <div class="opts" id="ro1">
+        <button class="opt" data-ok="1">Habitat laut tidak menentukan cara membiak; penyu bertelur tetapi ikan paus beranak dan menyusukan anak</button>
+        <button class="opt" data-ok="0">Semua haiwan yang tinggal di dalam laut pasti membiak secara bertelur</button>
+        <button class="opt" data-ok="0">Ikan paus bertelur di dalam air manakala penyu beranak di pantai</button>
+      </div>
+      <div id="ro1Fb"></div>
+    </div>
+
+    <div class="card">
+      <h3>Soalan 2 · Apa yang berubah apabila seekor haiwan boleh terbang di udara seperti kelawar berbanding burung atau rama-rama?</h3>
+      <p class="muted" style="font-size:14.5px">Adakah semua haiwan yang boleh terbang membiak dengan cara yang sama?</p>
+      <div class="opts" id="ro2">
+        <button class="opt" data-ok="0">Semua haiwan bersayap dan boleh terbang membiak secara bertelur</button>
+        <button class="opt" data-ok="1">Kebolehan terbang tidak bermakna haiwan itu bertelur; kelawar beranak dan menyusukan anaknya</button>
+        <button class="opt" data-ok="0">Kelawar bertelur di dalam gua dan pokok</button>
+      </div>
+      <div id="ro2Fb"></div>
+    </div>
+
+    <div class="card">
+      <h3>Soalan 3 · Apa yang berubah pada cara anak haiwan berkembang apabila ia membiak secara bertelur berbanding beranak?</h3>
+      <p class="muted" style="font-size:14.5px">Di manakah anak haiwan membesar sebelum dilahirkan atau menetas?</p>
+      <div class="opts" id="ro3">
+        <button class="opt" data-ok="1">Bertelur berkembang di dalam telur di luar badan ibu, manakala beranak berkembang di dalam badan ibu dan lahir hidup</button>
+        <button class="opt" data-ok="0">Bertelur berkembang di dalam badan ibu, manakala beranak berkembang di luar badan ibu</button>
+        <button class="opt" data-ok="0">Kedua-duanya berkembang di dalam telur di dalam pasir pantai</button>
+      </div>
+      <div id="ro3Fb"></div>
+    </div>
+
+    <div class="card">
+      <h3>Rumuskan pemerhatian kamu dalam satu ayat</h3>
+      <p class="muted" style="font-size:14.5px">Lengkapkan idea utama: <i>"Semua haiwan membiak supaya spesies tidak pupus, sama ada secara …"</i> Kata kunci: <b>bertelur</b>, <b>beranak</b>, <b>habitat</b>, <b>terbang</b>, <b>pupus</b>.</p>
+      <textarea id="roText" placeholder="Tulis rumusan kamu di sini, atau tekan 🎤 Cakap untuk bercakap..."></textarea>
+      <div class="row">
+        <button class="mic" id="roMic">🎤 Cakap</button>
+        <button class="btn sm" id="roCheck">Semak rumusan</button>
+        <span class="muted" id="roMicStat" style="font-size:14px"></span>
+      </div>
+      <div id="roTxtFb"></div>
+    </div>
+
+    <div class="row"><button class="btn" data-go="2">Teruskan ke Faham</button></div>
+  </section>
+
+  <!-- ================= FASA 3: FAHAM ================= -->
+  <section class="panel" data-p="2" id="p2" hidden>
+    <span class="eyebrow">Fasa 3 · Faham (konsep abstrak)</span>
+    <div class="guide"><span class="av">DH</span><p><b class="who">Dr. Hana (Saintis Muda Rimba & Lautan)</b>Mari namakan konsep dengan mengelaskan 6 haiwan kamu kepada <b>Haiwan Bertelur</b> dan <b>Haiwan Beranak</b>, kemudian jawab kuiz adaptif!</p></div>
+
+    <div class="card">
+      <h3>1. Namakan Konsep: Kelaskan 6 Kad Haiwan</h3>
+      <p class="muted" style="font-size:14.5px">Pilih satu haiwan di bawah, kemudian klik kumpulan yang betul.</p>
+      <div class="animal-pool" id="classPool"></div>
+      <div class="row">
+        <button class="btn sm" style="background:#D9480F" id="btnToEgg">🥚 Masukkan ke Kumpulan Haiwan Bertelur</button>
+        <button class="btn sm" style="background:#1864AB" id="btnToBirth">🍼 Masukkan ke Kumpulan Haiwan Beranak</button>
+      </div>
+      <div id="classFb"></div>
+      <div class="sort-bins">
+        <div class="bin bertelur">
+          <h4>🥚 Kumpulan Haiwan Bertelur</h4>
+          <p class="muted" style="font-size:13.5px;margin-bottom:8px">Anak berkembang di dalam telur di luar badan ibu, kemudian menetas.</p>
+          <div class="bin-items" id="binEgg"></div>
+        </div>
+        <div class="bin beranak">
+          <h4>🍼 Kumpulan Haiwan Beranak</h4>
+          <p class="muted" style="font-size:13.5px;margin-bottom:8px">Anak berkembang di dalam badan ibu, lahir hidup dan menyusu.</p>
+          <div class="bin-items" id="binBirth"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>2. Kuiz AI Adaptif (8 Soalan daripada Bank 9 Soalan)</h3>
+      <p class="muted" style="font-size:14.5px">AI melaraskan aras kesukaran (Mudah, Sederhana, Sukar) mengikut jawapan dan kelajuan kamu.</p>
+      <div id="kuizFaham"></div>
+    </div>
+
+    <div class="card">
+      <h3>3. Sebut Konsep dengan Jelas (Semakan Suara)</h3>
+      <p class="muted" style="font-size:14.5px">Sebutkan dua cara pembiakan haiwan dengan lantang: <b>"bertelur dan beranak"</b> atau terangkan mengapa <b>ikan paus</b> beranak.</p>
+      <div class="row">
+        <button class="mic" id="readBtn">🎤 Sebut sekarang</button>
+        <span class="muted" id="readStat" style="font-size:14px"></span>
+      </div>
+      <div id="readFb"></div>
+    </div>
+
+    <div class="row"><button class="btn" data-go="3">Teruskan ke Cuba</button></div>
+  </section>
+
+  <!-- ================= FASA 4: CUBA ================= -->
+  <section class="panel" data-p="3" id="p3" hidden>
+    <span class="eyebrow">Fasa 4 · Cuba (uji kaji aktif)</span>
+    <div class="guide"><span class="av">DH</span><p><b class="who">Dr. Hana (Saintis Muda Rimba & Lautan)</b>Kini giliran kamu menguji pengetahuan pada <b>3 situasi haiwan baharu</b>! Buat ramalan dahulu berdasarkan petunjuk saintifik, kemudian semak hasil uji kaji kamu.</p></div>
+
+    <div id="cubaArea"></div>
+
+    <div class="card">
+      <h3>Rekod Uji Kaji Saya</h3>
+      <div class="mine" id="mine"></div>
+    </div>
+
+    <div class="card">
+      <h3>Bukti: Pengalaman Menjadi Pengetahuan</h3>
+      <div class="evidence">
+        <div><b id="evCards">0/6</b>kad haiwan diteroka</div>
+        <div><b id="evClass">0/6</b>haiwan dikelaskan</div>
+        <div><b id="evRead">0</b>sebutan konsep tepat</div>
+        <div><b id="evMine">0/3</b>situasi baharu diuji</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+
+/* ================= DATA DARI JADUAL PERANCANGAN ================= */
+const WORDS=[
+  {w:"ayam", info:"bertelur; mengeram telur sehingga menetas", cara:"bertelur", habitat:"Darat", isSeaBirth:false, isFlyBirth:false},
+  {w:"kucing", info:"beranak; anak menyusu daripada ibu", cara:"beranak", habitat:"Darat", isSeaBirth:false, isFlyBirth:false},
+  {w:"ikan paus", info:"beranak walaupun hidup di laut; menyusukan anak", cara:"beranak", habitat:"Laut", isSeaBirth:true, isFlyBirth:false},
+  {w:"katak", info:"bertelur; telur menetas menjadi berudu", cara:"bertelur", habitat:"Air dan darat", isSeaBirth:false, isFlyBirth:false},
+  {w:"kelawar", info:"beranak walaupun boleh terbang", cara:"beranak", habitat:"Udara (gua, pokok)", isSeaBirth:false, isFlyBirth:true},
+  {w:"penyu", info:"bertelur di dalam pasir di pantai", cara:"bertelur", habitat:"Laut", isSeaBirth:false, isFlyBirth:false}
+];
+
+const PRAISE=["Hebat!","Bagus sekali!","Syabas!","Tepat!","Cemerlang!"];
+const pr=()=>PRAISE[Math.floor(Math.random()*PRAISE.length)];
+
+const KEY="haiwan-ar-v1";
+let S={};
+try{S=JSON.parse(localStorage.getItem(KEY)||"{}")||{};}catch(e){S={};}
+S.found=S.found||[];
+S.stars=S.stars||0;
+S.badges=S.badges||[];
+S.mis=S.mis||{};
+S.m2Sea=!!S.m2Sea;
+S.m2Fly=!!S.m2Fly;
+S.roAns=S.roAns||{};
+S.roText=S.roText||"";
+S.classified=S.classified||{};
+S.read=S.read||0;
+S.cubaDone=S.cubaDone||{};
+S.phase=S.phase||0;
+S.done=S.done||{};
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}};
+
+let tT;
+function toast(t){
+  const e=$("#toast");
+  e.textContent=t;
+  e.classList.add("show");
+  clearTimeout(tT);
+  tT=setTimeout(()=>e.classList.remove("show"),2800);
+}
+
+function star(n){
+  S.stars+=n;
+  save();
+  $("#stars").textContent="★ "+S.stars;
+}
+
+/* ================= SOKONGAN DIALOG (Oinas-Kukkonen & Harjumaa, 2009) ================= */
+const SD_L={pencetus:"Pencetus",peringatan:"Peringatan",cadangan:"Cadangan",pujian:"Pujian",ganjaran:"Ganjaran"};
+const sdChip=t=>`<span class="sd sd-${t}">${SD_L[t]}</span> `;
+
+function sd(type,html){
+  const p=document.querySelector('.panel:not([hidden]) .guide p');
+  if(!p)return;
+  let t=p.querySelector('span[id]');
+  if(!t){
+    const who=p.querySelector('.who');
+    const rest=[...p.childNodes].filter(n=>n!==who);
+    t=document.createElement('span');
+    t.id="sdg"+Math.random().toString(36).slice(2,7);
+    rest.forEach(n=>t.appendChild(n));
+    p.appendChild(t);
+  }
+  t.innerHTML=sdChip(type)+html;
+}
+
+function badgeUI(){
+  const b=document.getElementById("badges");
+  if(b)b.textContent="🏅 "+S.badges.length;
+}
+
+function award(name){
+  if(S.badges.includes(name))return;
+  S.badges.push(name);
+  save();
+  badgeUI();
+  sd("ganjaran",`Tahniah! Kamu menerima lencana <b>${name}</b>.`);
+  toast("🏅 Ganjaran: lencana "+name);
+}
+
+$("#badges").onclick=()=>toast(S.badges.length?"Lencana kamu: "+S.badges.join(", "):"Belum ada lencana. Selesaikan misi untuk mendapatkannya.");
+
+function sdIdle(getMsg){
+  let last=Date.now(),sent=false;
+  ["pointerdown","keydown","input"].forEach(ev=>document.addEventListener(ev,()=>{last=Date.now();sent=false;},true));
+  setInterval(()=>{
+    if(sent||document.hidden||Date.now()-last<25000)return;
+    const m=getMsg();
+    if(!m)return;
+    sent=true;
+    sd("peringatan",m);
+    toast("Peringatan: "+m.replace(/<[^>]+>/g,""));
+  },5000);
+}
+
+function sdCheck(text,K,fbEl){
+  const t=(text||"").toLowerCase();
+  if(t.trim().length<8){
+    fbEl.innerHTML='<div class="fb info">Tulis atau cakap sekurang-kurangnya satu ayat lengkap dahulu.</div>';
+    sd("cadangan","Cuba terangkan dalam satu ayat lengkap.");
+    return 0;
+  }
+  const got=K.filter(([,re])=>re.test(t)).map(([k])=>k);
+  const miss=K.filter(([,re])=>!re.test(t)).map(([k])=>k);
+  const good=got.length>=Math.min(2,K.length);
+  fbEl.innerHTML=`<div class="fb ${good?"ok":"info"}">${good?pr()+" ":""}Jawapan kamu menyentuh idea utama: <b>${got.join(", ")||"belum ada kata kunci utama"}</b>.${miss.length?" Idea yang tertinggal untuk ditambah: <b>"+miss.join(", ")+"</b>.":" Rumusan lengkap!"}</div>`;
+  if(good)sd("pujian",`Rumusan yang tepat! Kamu berjaya mengaitkan ${got.join(", ")}.`);
+  else sd("cadangan","Cuba lengkapkan dengan idea yang tertinggal: "+miss.join(", ")+".");
+  return got.length;
+}
+
+function sdTag(type){
+  const p=document.querySelector('.panel:not([hidden]) .guide p');
+  if(!p)return;
+  let t=p.querySelector('span[id]');
+  if(t){
+    if(!t.querySelector('.sd'))t.innerHTML=sdChip(type)+t.innerHTML;
+    return;
+  }
+  const who=p.querySelector('.who');
+  const rest=[...p.childNodes].filter(n=>n!==who);
+  t=document.createElement('span');
+  t.id="sdg"+Math.random().toString(36).slice(2,7);
+  rest.forEach(n=>t.appendChild(n));
+  p.appendChild(t);
+  t.insertAdjacentHTML('afterbegin',sdChip(type));
+}
+
+function speak(t){
+  try{
+    const u=new SpeechSynthesisUtterance(t);
+    u.lang="ms-MY";
+    const v=speechSynthesis.getVoices().find(v=>/^(ms|id)/i.test(v.lang));
+    if(v)u.voice=v;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+function go(p){
+  S.phase=p;
+  save();
+  $$(".panel").forEach(x=>x.hidden=+x.dataset.p!==p);
+  $$(".phb").forEach(b=>b.setAttribute("aria-current",+b.dataset.p===p));
+  $$(".phb").forEach(b=>b.classList.toggle("done",!!S.done[b.dataset.p]));
+  window.scrollTo({top:0,behavior:"smooth"});
+  setTimeout(()=>sdTag(["pencetus","pencetus","pencetus","pencetus"][p]),0);
+  if(p===0)renderFound();
+  if(p===1)renderRO();
+  if(p===2)renderAC();
+  if(p===3)renderAE();
+}
+$$(".phb").forEach(b=>b.onclick=()=>go(+b.dataset.p));
+$$("[data-go]").forEach(b=>b.onclick=()=>{S.done[S.phase]=true;go(+b.dataset.go);});
+
+/* ================= FASA 1: ALAMI (Guna ArKad) ================= */
+let MSEL=null;
+function misUI(el,MIS,done,opt){
+  opt=opt||{};
+  const n=MIS.filter(m=>done[m.id]).length;
+  if(el._n!==n){el._n=n;MSEL=null;}
+  const cur=MIS.find(m=>!done[m.id]), f=MIS.find(m=>m.id===MSEL)||cur;
+  let h;
+  if(!f){
+    h=`<div class="mcur all"><span class="mlab">Semua ${MIS.length} misi selesai ✓</span><b>Tahniah penyelidik muda! Teruskan ke Fasa 2: Renung.</b></div>`;
+  }else{
+    const i=MIS.indexOf(f), st=opt.started&&opt.started();
+    h=`<div class="mcur ${done[f.id]?"isdone":""}">
+      <span class="mlab">🎯 Misi ${i+1} daripada ${MIS.length}${done[f.id]?" · selesai ✓":f===cur?" · sedang dibuat"+(f.prog?" · "+f.prog():""):" · belum dibuka"}</span>
+      <b class="mt">${f.t}</b>
+      ${f.h?`<p>💡 <b>Cara:</b> ${f.h}</p>`:""}
+      ${opt.extra&&f===cur?opt.extra(f):""}
+      ${!st&&opt.start?`<button class="btn sm mgo">▶ Mula misi ini</button>`:""}
+    </div>`;
+  }
+  h+=`<div class="mdots" role="group" aria-label="Pilih misi">${MIS.map((m,i)=>`<button class="${done[m.id]?"done":""} ${f&&m.id===f.id?"on":""}" data-m="${m.id}">Misi ${i+1}${done[m.id]?" ✓":""}</button>`).join("")}<span>${n}/${MIS.length} selesai</span></div>`;
+  el.innerHTML=h;
+  el.classList.add("mpanel");
+  el.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{MSEL=b.dataset.m;misUI(el,MIS,done,opt);});
+  const g=el.querySelector(".mgo");
+  if(g)g.onclick=()=>{opt.start();misUI(el,MIS,done,opt);};
+}
+
+const m2Count=()=> (S.m2Sea?1:0) + (S.m2Fly?1:0);
+const MIS=[
+  {
+    id:"m1",
+    t:"Misi 1: Teroka mana-mana 3 kad haiwan untuk melihat cara pembiakannya.",
+    h:"Imbas dengan kamera atau klik gambar kad haiwan di bawah untuk membaca petunjuknya.",
+    prog:()=>`${Math.min(S.found.length,3)}/3 kad`,
+    ok:()=>S.found.length>=3
+  },
+  {
+    id:"m2",
+    t:"Misi 2: Cari kad haiwan yang 'hidup di laut tetapi beranak' (1 kali) dan 'boleh terbang tetapi beranak' (1 kali).",
+    h:"Perhatikan haiwan pengecualian! Imbas atau klik kedua-dua haiwan tersebut.",
+    prog:()=>`${m2Count()}/2 pengecualian ditemui`,
+    ok:()=>S.found.length>=3 && S.m2Sea && S.m2Fly
+  },
+  {
+    id:"m3",
+    t:"Misi 3: Kumpul kesemua 6 kad haiwan ke dalam koleksi digital kamu.",
+    h:"Lihat koleksi di bawah. Cari kad haiwan yang masih bertanda ؟.",
+    prog:()=>`${S.found.length}/6 kad`,
+    ok:()=>S.m2Sea && S.m2Fly && S.found.length>=6
+  }
+];
+
+function m2PromptText(){
+  if(!S.m2Sea && !S.m2Fly) return "🔎 Syarat 1 & 2: Cari haiwan yang <b>hidup di laut tetapi beranak</b> DAN haiwan yang <b>boleh terbang tetapi beranak</b>.";
+  if(!S.m2Sea) return "🔎 Syarat 1 (1/2 selesai): Cari haiwan yang <b>hidup di laut tetapi beranak</b>.";
+  if(!S.m2Fly) return "🔎 Syarat 2 (1/2 selesai): Cari haiwan yang <b>boleh terbang tetapi beranak</b>.";
+  return "✓ Kedua-dua haiwan pengecualian berjaya ditemui!";
+}
+
+function renderFound(){
+  $("#found").innerHTML=WORDS.map(o=>{
+    const got=S.found.includes(o.w);
+    return `<span class="${got?"got":""}">${got?(o.cara==="bertelur"?"🥚":"🍼"):"؟"} ${o.w}</span>`;
+  }).join("");
+  $("#summary").textContent=`${S.found.length}/6 kad haiwan dikumpul · Misi pengecualian: ${m2Count()}/2`;
+
+  MIS.forEach((m,i)=>{
+    if(!S.mis[m.id]&&(i===0||S.mis[MIS[i-1].id])&&m.ok()){
+      S.mis[m.id]=true;
+      star(2);
+      toast(`${pr()} ${m.t} selesai!`);
+      if(S.phase===0)sd("pujian",`${pr()} Kamu berjaya menyelesaikan ${m.t}`);
+    }
+  });
+
+  const c=MIS.find(m=>!S.mis[m.id]);
+  misUI($("#missions"),MIS,S.mis,{
+    started:()=>!$("#tapWrap").hidden,
+    start:()=>$("#tapBtn").click(),
+    extra:m=>m.id==="m2"?`<p class="huntbox">${m2PromptText()}</p>`:""
+  });
+
+  $("#tapMission").innerHTML = c ? (c.id==="m2" ? m2PromptText() : `🎯 ${c.t}`) : "✓ Semua 3 misi selesai! Teruskan ke Fasa 2: Renung.";
+
+  if(!c){
+    S.done[0]=true;
+    award("Penyelidik Haiwan");
+  }
+  save();
+}
+
+function handleCardFound(i, kad){
+  const o = WORDS[i];
+  if(!o) return;
+  speak(`${o.w}. ${o.info}`);
+  
+  const isNew = !S.found.includes(o.w);
+  if(isNew){
+    S.found.push(o.w);
+    star(1);
+  }
+
+  let msgHtml = `<div class="fb info" style="text-align:left">
+    <strong style="font-size:19px;text-transform:capitalize">${o.cara==="bertelur"?"🥚":"🍼"} ${o.w}</strong><br>
+    <span><b>Maklumat:</b> ${o.info}</span><br>
+    <span><b>Habitat:</b> ${o.habitat}</span>
+  </div>`;
+
+  // Semak syarat Misi 2 apabila Misi 1 sudah selesai
+  if(S.mis.m1 && !S.mis.m2){
+    if(o.isSeaBirth && !S.m2Sea){
+      S.m2Sea = true;
+      star(2);
+      msgHtml = `<div class="fb ok" style="margin-bottom:8px">✓ Tepat! <b>Ikan paus</b> hidup di laut tetapi beranak dan menyusukan anak (+2 bintang).</div>` + msgHtml;
+      sd("pujian","Syabas! Kamu menemui pengecualian haiwan laut yang beranak.");
+    } else if(o.isFlyBirth && !S.m2Fly){
+      S.m2Fly = true;
+      star(2);
+      msgHtml = `<div class="fb ok" style="margin-bottom:8px">✓ Tepat! <b>Kelawar</b> boleh terbang tetapi beranak (+2 bintang).</div>` + msgHtml;
+      sd("pujian","Cemerlang! Kelawar ialah haiwan terbang yang beranak.");
+    } else if(!o.isSeaBirth && !o.isFlyBirth){
+      sd("cadangan",`${o.w.toUpperCase()} membiak secara ${o.cara}. Untuk Misi 2, cari haiwan yang hidup di laut atau boleh terbang tetapi beranak.`);
+    }
+  } else if(isNew){
+    sd("pujian",`${pr()} Kad <b>${o.w}</b> (${o.cara}) telah ditambah ke koleksi kamu.`);
+  }
+
+  const showEl = $("#tapShow");
+  if(showEl) showEl.innerHTML = msgHtml;
+  toast(`${o.w.toUpperCase()}: ${o.info}`);
+  save();
+  renderFound();
+}
+
+// Inisialisasi pustaka ArKad
+if(window.ArKad){
+  ArKad.sediakan({
+    kad: WORDS.map(o=>({nama:o.w, info:o.info})),
+    apabilaJumpa: (i, kad) => handleCardFound(i, kad)
+  });
+  ArKad.paparKad($("#cards"));
+}
+
+$("#tapBtn").onclick=()=>{
+  $("#tapWrap").hidden=false;
+  $("#tapBtn").hidden=true;
+  const imgs = (window.ArKad && ArKad.gambarKad) ? ArKad.gambarKad() : [];
+  $("#tapGrid").innerHTML=WORDS.map((o,i)=>{
+    const src = imgs[i] || "";
+    return `<button class="btn ghost" data-i="${i}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px">
+      ${src ? `<img src="${src}" alt="${o.w}" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px">` : `<span style="font-size:44px">🐾</span>`}
+      <span style="text-transform:capitalize">${o.w}</span>
+    </button>`;
+  }).join("");
+  $$("#tapGrid button").forEach(b=>b.onclick=()=>{
+    const idx = +b.dataset.i;
+    handleCardFound(idx, WORDS[idx]);
+  });
+  renderFound();
+  sd("pencetus","Klik mana-mana gambar kad haiwan di bawah untuk melihat cara pembiakannya. Ikut misi satu demi satu!");
+};
+
+$("#startBtn").onclick=()=>{
+  sd("pencetus","Kamera AR diaktifkan! Halakan kamera ke kad haiwan bercetak.");
+  if(window.ArKad && ArKad.mula){
+    ArKad.mula();
+  }else{
+    $("#err").hidden=false;
+    $("#err").textContent="Pustaka ArKad sedang dimuatkan. Sila cuba sebentar lagi atau guna mod tanpa kamera.";
+  }
+};
+
+/* ================= FASA 2: RENUNG ================= */
+function renderRO(){
+  [["ro1","#ro1Fb","Habitat laut tidak menentukan cara membiak! Penyu bertelur di pasir pantai manakala ikan paus beranak dan menyusukan anak."],
+   ["ro2","#ro2Fb","Kebolehan terbang tidak bermakna bertelur! Kelawar boleh terbang tetapi beranak dan menyusukan anaknya."],
+   ["ro3","#ro3Fb","Haiwan bertelur berkembang di dalam telur di luar badan ibu, manakala haiwan beranak berkembang di dalam badan ibu dan lahir hidup."]
+  ].forEach(([id,fbId,praiseMsg])=>{
+    const wrap=$("#"+id);
+    if(S.roAns[id]){
+      wrap.querySelectorAll(".opt").forEach(b=>{if(b.dataset.ok==="1")b.classList.add("right");});
+      $(fbId).innerHTML=`<div class="fb ok">${praiseMsg}</div>`;
+    }
+    wrap.querySelectorAll(".opt").forEach(b=>{
+      b.onclick=()=>{
+        const ok=b.dataset.ok==="1";
+        wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("right","wrong"));
+        b.classList.add(ok?"right":"wrong");
+        if(ok){
+          $(fbId).innerHTML=`<div class="fb ok">${pr()} ${praiseMsg}</div>`;
+          if(!S.roAns[id]){S.roAns[id]=true;star(1);sd("pujian",praiseMsg);}
+          if(S.roAns.ro1 && S.roAns.ro2 && S.roAns.ro3) S.done[1]=true;
+          save();
+        }else{
+          $(fbId).innerHTML=`<div class="fb bad">Belum tepat. Cuba semak semula maklumat pada kad haiwan di Fasa 1.</div>`;
+          sd("cadangan","Perhatikan semula petunjuk pada kad ikan paus, penyu dan kelawar.");
+        }
+      };
+    });
+  });
+}
+
+function mic(btn,ta,stat,cb){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  btn.onclick=()=>{
+    if(!SR){stat.textContent="Pelayar ini tidak menyokong suara ke teks. Guna Chrome atau taip sahaja.";return;}
+    try{
+      const r=new SR();
+      r.lang="ms-MY";
+      r.interimResults=true;
+      const base=ta.value?ta.value+" ":"";
+      btn.classList.add("on");
+      stat.textContent="Mendengar… bercakap sekarang.";
+      r.onresult=e=>{
+        let t="";
+        for(const res of e.results)t+=res[0].transcript;
+        ta.value=base+t;
+        ta.dispatchEvent(new Event("input"));
+      };
+      r.onerror=e=>{
+        stat.textContent=e.error==="not-allowed"?"Mikrofon tidak dibenarkan.":"Tidak dapat mendengar ("+e.error+"). Cuba lagi atau taip.";
+      };
+      r.onend=()=>{
+        btn.classList.remove("on");
+        if(stat.textContent.startsWith("Mendengar"))stat.textContent="Selesai. Rumusan kamu sedang disemak.";
+        if(cb)cb();
+      };
+      r.start();
+    }catch(e){stat.textContent="Suara ke teks tidak dapat dimulakan di sini. Taip sahaja.";}
+  };
+}
+
+mic($("#roMic"),$("#roText"),$("#roMicStat"),()=>$("#roCheck").click());
+
+const RO_K=[
+  ["cara pembiakan (bertelur & beranak)",/bertelur|telur|beranak|anak/],
+  ["tujuan pembiakan (spesies tidak pupus)",/pupus|spesies|zuriat/],
+  ["habitat atau kebolehan terbang tidak menentukan cara membiak",/habitat|laut|air|terbang|udara|tidak menentukan|bukan semua/]
+];
+
+$("#roCheck").onclick=()=>{
+  const n=sdCheck($("#roText").value,RO_K,$("#roTxtFb"));
+  if(n>=2 && !S.roStar){
+    S.roStar=true;
+    S.done[1]=true;
+    star(2);
+    award("Pemerhati Teliti");
+  }
+};
+$("#roText").value=S.roText||"";
+$("#roText").oninput=()=>{S.roText=$("#roText").value;save();};
+
+/* ================= FASA 3: FAHAM (Guna AIAdaptif) ================= */
+let selectedAnimal = null;
+let kuizStarted = false;
+
+function renderAC(){
+  // 1. Pengelasan 6 haiwan
+  const poolEl = $("#classPool");
+  const unclassified = WORDS.filter(o=>!S.classified[o.w]);
+  if(!selectedAnimal || S.classified[selectedAnimal]){
+    selectedAnimal = unclassified.length ? unclassified[0].w : null;
+  }
+
+  poolEl.innerHTML = WORDS.map(o=>{
+    const done = !!S.classified[o.w];
+    const act = selectedAnimal === o.w;
+    return `<button class="apill ${done?"done":""} ${act?"active":""}" data-w="${o.w}" ${done?"disabled":""}>${done?"✓ ":""}${o.w}</button>`;
+  }).join("");
+
+  $$("#classPool .apill").forEach(b=>{
+    b.onclick=()=>{
+      selectedAnimal = b.dataset.w;
+      renderAC();
+    };
+  });
+
+  $("#binEgg").innerHTML = WORDS.filter(o=>S.classified[o.w]==="bertelur").map(o=>`<span class="bin-tag">🥚 ${o.w}</span>`).join("") || '<span class="muted" style="font-size:13.5px">Belum ada</span>';
+  $("#binBirth").innerHTML = WORDS.filter(o=>S.classified[o.w]==="beranak").map(o=>`<span class="bin-tag">🍼 ${o.w}</span>`).join("") || '<span class="muted" style="font-size:13.5px">Belum ada</span>';
+
+  // 2. Mulakan Kuiz AIAdaptif sekali
+  if(!kuizStarted && window.AIAdaptif){
+    kuizStarted = true;
+    AIAdaptif.kuiz("#kuizFaham", {
+      soalan: [
+        // 3 Mudah (lvl 1)
+        {lvl:1, c:"cara_membiak", t:"Ayam membiak dengan cara apa?", o:["Bertelur","Beranak","Menyusukan anak","Membelah diri"], a:"Bertelur", h:"Ibu ayam mengeram telur sehingga menetas."},
+        {lvl:1, c:"cara_membiak", t:"Haiwan manakah yang membiak secara beranak?", o:["Kucing","Ayam","Katak","Penyu"], a:"Kucing", h:"Anaknya menyusu daripada ibunya."},
+        {lvl:1, c:"perkembangan_anak", t:"Apakah yang keluar apabila telur katak menetas?", o:["Berudu","Ulat","Kepompong","Anak katak dewasa"], a:"Berudu", h:"Telur katak menetas di dalam air."},
+        // 3 Sederhana (lvl 2)
+        {lvl:2, c:"salah_faham_habitat", t:"Ikan paus hidup di laut. Bagaimanakah ikan paus membiak?", o:["Beranak","Bertelur di dalam pasir","Bertelur di dalam air","Menetas daripada telur"], a:"Beranak", h:"Walaupun hidup di laut, ikan paus menyusukan anaknya."},
+        {lvl:2, c:"salah_faham_terbang", t:"Kelawar boleh terbang. Adakah kelawar bertelur?", o:["Tidak, kelawar beranak","Ya, kelawar bertelur di gua","Ya, kelawar bertelur di pokok","Ya, kerana ia seperti burung"], a:"Tidak, kelawar beranak", h:"Kelawar menyusukan anaknya."},
+        {lvl:2, c:"salah_faham_saiz", t:"Namakan satu haiwan bersaiz besar yang membiak secara bertelur.", o:["Buaya atau penyu","Gajah","Lembu","Ikan paus"], a:"Buaya atau penyu", h:"Saiz badan tidak menentukan cara pembiakan."},
+        // 3 Sukar (lvl 3)
+        {lvl:3, c:"salah_faham_habitat", t:"Mengapakah ikan paus dikelaskan sebagai haiwan beranak dan bukan seperti ikan biasa?", o:["Ia melahirkan anak hidup dan menyusukan anaknya","Ia mempunyai saiz badan yang besar","Ia bertelur di dasar laut","Ia hidup di darat dan di air"], a:"Ia melahirkan anak hidup dan menyusukan anaknya", h:"Ikan paus ialah mamalia yang bernafas dengan paru-paru."},
+        {lvl:3, c:"salah_faham_habitat", t:"Ali berkata, 'Semua haiwan yang hidup di dalam air bertelur.' Adakah Ali betul?", o:["Tidak, kerana ikan paus atau ikan lumba-lumba beranak","Betul, kerana penyu dan katak bertelur","Betul, kerana semua haiwan laut ialah ikan","Tidak, kerana buaya beranak di air"], a:"Tidak, kerana ikan paus atau ikan lumba-lumba beranak", h:"Ingat kembali haiwan laut yang menyusukan anak."},
+        {lvl:3, c:"fakta_unik", t:"Platipus menyusukan anaknya tetapi bertelur. Apakah yang boleh kita simpulkan?", o:["Menyusukan anak tidak selalu bermaksud beranak; perlu lihat cara anak dilahirkan","Semua haiwan bertelur menyusukan anak","Platipus bukan haiwan mamalia","Menyusukan anak hanya untuk haiwan darat"], a:"Menyusukan anak tidak selalu bermaksud beranak; perlu lihat cara anak dilahirkan", h:"Platipus ialah mamalia unik yang bertelur."}
+      ],
+      pembetulan: {
+        cara_membiak: {t:"Konsep Cara Membiak (Bertelur vs Beranak)", d:"Haiwan bertelur menghasilkan telur yang menetas di luar badan ibu (contoh: ayam, katak, penyu). Haiwan beranak melahirkan anak yang hidup dan menyusukannya (contoh: kucing, lembu)."},
+        perkembangan_anak: {t:"Konsep Istilah Menetas & Perkembangan", d:"Menetas bermaksud anak haiwan keluar daripada telur apabila cukup berkembang. Telur katak menetas menjadi berudu di dalam air."},
+        salah_faham_habitat: {t:"Salah Faham Haiwan Air (Ikan Paus vs Penyu)", d:"Habitat air tidak menentukan cara pembiakan. Penyu bertelur di pasir pantai, tetapi ikan paus dan ikan lumba-lumba ialah mamalia laut yang beranak dan menyusukan anak."},
+        salah_faham_terbang: {t:"Salah Faham Haiwan Terbang (Kelawar)", d:"Kebolehan terbang tidak bermakna haiwan itu bertelur. Kelawar boleh terbang tetapi beranak dan menyusukan anaknya."},
+        salah_faham_saiz: {t:"Salah Faham Saiz Haiwan", d:"Saiz haiwan tidak menentukan cara pembiakan. Buaya dan penyu bersaiz besar tetapi bertelur, manakala tikus kecil tetapi beranak."},
+        fakta_unik: {t:"Fakta Unik Pembiakan Haiwan (Platipus)", d:"Platipus dan landak berduri (ekidna) ialah mamalia unik yang bertelur tetapi tetap menyusukan anaknya."}
+      },
+      jumlah: 8,
+      mesej: (jenis, teks) => {
+        const map = {pujian:"pujian", cadangan:"cadangan", pencetus:"pencetus", ganjaran:"ganjaran", peringatan:"peringatan"};
+        sd(map[jenis] || "cadangan", teks);
+        if(jenis === "pujian") star(1);
+      }
+    });
+  }
+}
+
+function classifySelected(choice){
+  if(!selectedAnimal){
+    $("#classFb").innerHTML='<div class="fb ok">Semua 6 haiwan telah berjaya dikelaskan!</div>';
+    return;
+  }
+  const obj = WORDS.find(o=>o.w===selectedAnimal);
+  if(obj.cara === choice){
+    S.classified[obj.w] = choice;
+    star(1);
+    $("#classFb").innerHTML=`<div class="fb ok">${pr()} <b>${obj.w.toUpperCase()}</b> memang membiak secara <b>${choice}</b> (${obj.info}).</div>`;
+    sd("pujian",`${pr()} <b>${obj.w}</b> dikelaskan dalam kumpulan haiwan ${choice}.`);
+    if(Object.keys(S.classified).length === WORDS.length){
+      S.done[2] = true;
+      award("Pakar Pengelasan");
+    }
+    save();
+    renderAC();
+  }else{
+    $("#classFb").innerHTML=`<div class="fb bad">Belum tepat untuk <b>${obj.w}</b>. Petunjuk: ${obj.info}.</div>`;
+    sd("cadangan",`Cuba semak petunjuk bagi ${obj.w}: ${obj.info}.`);
+  }
+}
+
+$("#btnToEgg").onclick=()=>classifySelected("bertelur");
+$("#btnToBirth").onclick=()=>classifySelected("beranak");
+
+// Semakan suara Fasa 3
+$("#readBtn").onclick=()=>{
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition, stat=$("#readStat");
+  if(!SR){stat.textContent="Pelayar ini tidak menyokong pengecaman suara. Guna Chrome atau Edge.";return;}
+  try{
+    const r=new SR();
+    r.lang="ms-MY";
+    $("#readBtn").classList.add("on");
+    stat.textContent="Mendengar… sebut konsep pembiakan haiwan.";
+    r.onresult=e=>{
+      const said = e.results[0][0].transcript.toLowerCase();
+      const hasBertelur = /bertelur|telur/.test(said);
+      const hasBeranak = /beranak|anak|paus|kelawar/.test(said);
+      if(hasBertelur || hasBeranak){
+        S.read++;
+        star(1);
+        save();
+        $("#readFb").innerHTML=`<div class="fb ok">${pr()} AI mendengar: "<b>${said}</b>". Konsep pembiakan disebut dengan jelas!</div>`;
+        sd("pujian",`${pr()} Sebutan kamu jelas dan tepat!`);
+      }else{
+        $("#readFb").innerHTML=`<div class="fb bad">AI mendengar: "<b>${said}</b>". Cuba sebut perkataan <b>bertelur</b> dan <b>beranak</b> dengan jelas.</div>`;
+        sd("cadangan","Cuba sebut: 'Haiwan membiak secara bertelur dan beranak'.");
+      }
+    };
+    r.onerror=e=>{stat.textContent="Tidak dapat mendengar ("+e.error+"). Cuba lagi.";};
+    r.onend=()=>{$("#readBtn").classList.remove("on");stat.textContent="";};
+    r.start();
+  }catch(e){stat.textContent="Pengecaman suara tidak dapat dimulakan di sini.";}
+};
+
+/* ================= FASA 4: CUBA (Situasi Baharu + AIAdaptif) ================= */
+const SITUASI = [
+  {
+    id:"s1",
+    lvl:1,
+    konsep:"salah_faham_habitat",
+    tajuk:"Situasi 1: Hidupan Air (Ikan Lumba-lumba & Ikan Gapi)",
+    petunjuk:"Kedua-dua haiwan ini hidup di dalam air. Ikan lumba-lumba bernafas dengan paru-paru dan menyusukan anak, manakala ikan gapi melahirkan anak ikan yang hidup.",
+    soalan:"Ramalkan cara pembiakan bagi Ikan Lumba-lumba dan Ikan Gapi:",
+    jawapan:"beranak",
+    penerangan:"Tepat! Walaupun hidup di dalam air, ikan lumba-lumba dan ikan gapi membiak secara <b>beranak</b>."
+  },
+  {
+    id:"s2",
+    lvl:2,
+    konsep:"salah_faham_saiz",
+    tajuk:"Situasi 2: Penguin & Ular Sawa",
+    petunjuk:"Penguin ialah burung yang tidak boleh terbang dan tinggal di kawasan sejuk. Ular sawa pula reptilia bersaiz panjang dan besar.",
+    soalan:"Ramalkan cara pembiakan bagi Penguin dan Ular Sawa:",
+    jawapan:"bertelur",
+    penerangan:"Betul! Penguin dan ular sawa kedua-duanya membiak secara <b>bertelur</b>. Saiz besar atau tidak boleh terbang tidak menjadikan ia beranak."
+  },
+  {
+    id:"s3",
+    lvl:3,
+    konsep:"fakta_unik",
+    tajuk:"Situasi 3: Platipus (Haiwan Unik)",
+    petunjuk:"Haiwan ini menyusukan anaknya seperti mamalia lain, tetapi mempunyai paruh seperti itik dan membina sarang.",
+    soalan:"Ramalkan cara pembiakan bagi Platipus:",
+    jawapan:"bertelur",
+    penerangan:"Syabas! Platipus ialah mamalia unik yang membiak secara <b>bertelur</b>, walaupun ia tetap menyusukan anaknya selepas menetas."
+  }
+];
+
+let curSitIndex = 0;
+let sitPredicted = null;
+let sitT0 = Date.now();
+
+function pickSuggestedSituation(){
+  const arasAI = (window.AIAdaptif && AIAdaptif.tahap) ? AIAdaptif.tahap().lvl : 2;
+  // Cari situasi yang belum selesai yang paling hampir dengan aras AI
+  const belum = SITUASI.map((s,idx)=>({s,idx})).filter(x=>!S.cubaDone[x.s.id]);
+  if(!belum.length) return 0;
+  belum.sort((a,b)=>Math.abs(a.s.lvl - arasAI) - Math.abs(b.s.lvl - arasAI));
+  return belum[0].idx;
+}
+
+function renderAE(){
+  const arasAI = (window.AIAdaptif && AIAdaptif.tahap) ? AIAdaptif.tahap().lvl : 2;
+  const namaAras = ["","Mudah","Sederhana","Sukar"][arasAI] || "Sederhana";
+  
+  if(S.cubaDone[SITUASI[curSitIndex].id] && Object.keys(S.cubaDone).length < SITUASI.length){
+    curSitIndex = pickSuggestedSituation();
+  }
+
+  const sit = SITUASI[curSitIndex];
+  sitPredicted = null;
+  sitT0 = Date.now();
+
+  const tabsHtml = `<div class="row" style="margin-bottom:8px">
+    ${SITUASI.map((x,idx)=>`<button class="btn sm ${idx===curSitIndex?"":"ghost"}" data-sidx="${idx}">${S.cubaDone[x.id]?"✓ ":""}Situasi ${idx+1}</button>`).join("")}
+  </div>`;
+
+  $("#cubaArea").innerHTML = `${tabsHtml}
+  <div class="sit-card">
+    <div class="row" style="justify-content:space-between">
+      <span class="qaras">Aras Cabaran: ${["","Mudah","Sederhana","Sukar"][sit.lvl]} (Cadangan AI: ${namaAras})</span>
+      ${S.cubaDone[sit.id] ? '<span style="color:var(--ok);font-weight:800">✓ Sudah Diuji</span>' : ''}
+    </div>
+    <h3>${sit.tajuk}</h3>
+    <p><b>Petunjuk Saintifik:</b> ${sit.petunjuk}</p>
+    <p style="font-weight:700">${sit.soalan}</p>
+    <div class="opts" id="ramalOpts">
+      <button class="opt" data-val="bertelur">🥚 Ramalan: Bertelur</button>
+      <button class="opt" data-val="beranak">🍼 Ramalan: Beranak</button>
+    </div>
+    <div class="row">
+      <button class="btn" id="btnUji" disabled>🔬 Uji & Semak Ramalan</button>
+    </div>
+    <div id="cubaFb"></div>
+  </div>`;
+
+  $$("#cubaArea [data-sidx]").forEach(b=>{
+    b.onclick=()=>{
+      curSitIndex = +b.dataset.sidx;
+      renderAE();
+    };
+  });
+
+  $$("#ramalOpts .opt").forEach(b=>{
+    b.onclick=()=>{
+      $$("#ramalOpts .opt").forEach(x=>x.style.borderColor="var(--line)");
+      b.style.borderColor="var(--ae)";
+      b.style.background="#fff";
+      sitPredicted = b.dataset.val;
+      $("#btnUji").disabled = false;
+      $("#cubaFb").innerHTML = `<div class="fb info">Ramalan dipilih: <b>${sitPredicted.toUpperCase()}</b>. Tekan butang <b>Uji & Semak Ramalan</b> untuk melihat hasil sebenar!</div>`;
+    };
+  });
+
+  $("#btnUji").onclick=()=>{
+    if(!sitPredicted) return;
+    const ok = sitPredicted === sit.jawapan;
+    const secs = Math.max(2, Math.round((Date.now() - sitT0)/1000));
+    
+    if(window.AIAdaptif && AIAdaptif.rekod){
+      AIAdaptif.rekod({ok:ok, hints:0, secs:secs, exp:20, concept:sit.konsep});
+    }
+
+    if(ok){
+      S.cubaDone[sit.id] = sit.jawapan;
+      star(2);
+      $("#cubaFb").innerHTML = `<div class="fb ok">${pr()} Ramalan kamu tepat! ${sit.penerangan} (+2 bintang)</div>`;
+      sd("pujian",`${pr()} Ramalan kamu pada ${sit.tajuk} terbukti benar!`);
+      if(Object.keys(S.cubaDone).length === SITUASI.length){
+        S.done[3] = true;
+        award("Saintis Muda Cemerlang");
+      }
+      save();
+      renderMineAndEvidence();
+    }else{
+      $("#cubaFb").innerHTML = `<div class="fb bad">Ramalan kamu (<b>${sitPredicted}</b>) kurang tepat. ${sit.penerangan} Cuba pilih jawapan yang betul dan uji semula!</div>`;
+      sd("cadangan",`Perhatikan semula petunjuk saintifik: ${sit.petunjuk}`);
+    }
+  };
+
+  renderMineAndEvidence();
+}
+
+function renderMineAndEvidence(){
+  const doneKeys = Object.keys(S.cubaDone);
+  $("#mine").innerHTML = doneKeys.length
+    ? doneKeys.map(k=>{
+        const s = SITUASI.find(x=>x.id===k);
+        return `<span>✓ ${s.tajuk.replace(/^Situasi \d+:\s*/,"")} → ${s.jawapan.toUpperCase()}</span>`;
+      }).join("")
+    : '<span class="muted" style="border:0;background:none">Belum ada situasi diuji.</span>';
+
+  $("#evCards").textContent = `${S.found.length}/6`;
+  $("#evClass").textContent = `${Object.keys(S.classified).length}/6`;
+  $("#evRead").textContent = `${S.read}`;
+  $("#evMine").textContent = `${doneKeys.length}/3`;
+}
+
+/* ================= PERINGATAN IDLE & NAVIGASI BAWAH ================= */
+sdIdle(()=>{
+  if(S.phase===0){
+    const c=MIS.find(m=>!S.mis[m.id]);
+    return c ? "Masih di situ penyelidik muda? Cuba selesaikan: "+c.t : null;
+  }
+  if(S.phase===1) return "Jangan lupa jawab 3 soalan pemerhatian dan tulis atau cakap ayat rumusan kamu.";
+  if(S.phase===2) return "Kelaskan kesemua 6 haiwan dan selesaikan kuiz AI Adaptif di Fasa Faham.";
+  return "Pilih ramalan bertelur atau beranak untuk situasi baharu, kemudian tekan Uji & Semak Ramalan.";
+});
+
+// Butang Mula Semula
+(function(){
+  const R=document.getElementById('resetAll');
+  let armT=null;
+  window.resetApp=function(){
+    if(!R)return;
+    if(!R.classList.contains('warn')){
+      R.classList.add('warn');
+      R.textContent='Tekan lagi untuk padam semua';
+      clearTimeout(armT);
+      armT=setTimeout(()=>{R.classList.remove('warn');R.textContent='🔄 Mula semula';},4000);
+      return;
+    }
+    try{localStorage.removeItem(KEY);}catch(e){}
+    location.reload();
+  };
+  if(R)R.addEventListener('click',window.resetApp);
+})();
+
+// Navigasi antara fasa di bahagian bawah panel
+(function(){
+  const N=["Alami","Renung","Faham","Cuba"];
+  const ph=n=>document.querySelector('.phb[data-p="'+n+'"]');
+  document.querySelectorAll('.panel[data-p]').forEach(p=>{
+    const i=+p.dataset.p;
+    const d=document.createElement('div');
+    d.className='pnav';
+    d.innerHTML=(i>0?'<button class="btn ghost" data-nav="'+(i-1)+'">← '+(i)+' '+N[i-1]+'</button>':'<a class="btn ghost" href="contoh.html">🏠 Menu contoh</a>')+'<span class="sp"></span>'+
+      (i<3?'<button class="btn" data-nav="'+(i+1)+'">'+(i+2)+' '+N[i+1]+' →</button>':'<a class="btn" href="contoh.html">Selesai: kembali ke menu 🏠</a>');
+    p.appendChild(d);
+  });
+  document.querySelectorAll('[data-nav]').forEach(b=>{
+    const pan=b.closest('.panel'), n=+b.dataset.nav, old=pan&&n>+pan.dataset.p?pan.querySelector('[data-go="'+n+'"]'):null;
+    if(old&&old.parentElement&&old.parentElement.classList.contains('row')&&old.parentElement.children.length===1)old.parentElement.hidden=true;
+    b.addEventListener('click',()=>{
+      if(old)old.click();
+      else{const t=ph(n);if(t)t.click();}
+    });
+  });
+})();
+
+$("#stars").textContent="★ "+S.stars;
+badgeUI();
+renderFound();
+go(S.phase||0);
+</script>
+
+<footer class="credit" role="contentinfo">
+  <div class="logos"><img src="logo-ukm.png" alt="Universiti Kebangsaan Malaysia" onerror="this.remove()"><img src="logo-ftsm.png" alt="Fakulti Teknologi dan Sains Maklumat" onerror="this.remove()"></div>
+  <p><b>Didik<span class="bAR">AR</span>ealiti <span class="bAI">AI</span></b>: Simulator AR dan AI menerusi kitaran pembelajaran berasaskan pengalaman</p>
+  <p>Berdasarkan template DidikARealiti AI © 2026 FTSM, Universiti Kebangsaan Malaysia (CC BY-NC-SA 4.0)</p>
+  <p>Diadaptasi oleh Cikgu Sains Tahun 4, Sekolah Kebangsaan</p>
+</footer>
+
+</body>
+</html>
